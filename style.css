@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+.header{
+    height: 100vh;
+    background-image: url(img/travel1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    animation: background-header 15s ease 3s infinite;
+}
+@keyframes background-header {
+    0%{
+        background-image: url(img/travel1.jpg);
+    }
+    33%{
+        background-image: url(img/travel4.jpg);
+    }
+    67%{
+        background-image: url(img/travel3.jpg);
+    }
+}
+.header .container{
+    padding-top: 20px;
+}
+.header .container>h1{
+    float: left;
+}
+/* Tombol Login */
+.header .container .login-btn{
+    width: 100px;
+    padding: 3px 0;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 50px;
+    float: right;
+    font-weight: 600;
+}
+.header .container .login-btn:hover{
+    background-color: white;
+    color: black;
+}
+.header>h1{
+    padding-top: 200px;
+    font-size: 55px;
+}
+/* Pencarian */
+.input-group{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+    background: #fff;
+    margin: auto;
+    padding: 2px;
+}
+.input-group .form-control{
+    border: 0;
+    border-radius: 30px 0 0 30px;
+    box-shadow: none !important;
+    margin: 2px;
+}
+.input-group .input-group-text{
+    width: 100px;
+    background-image: linear-gradient(skyblue, rgb(37, 148, 192));
+    border-radius: 30px;
+    box-shadow: none;
+    color: #fff;
+    border: 0;
+    margin: 2px;
+}
+
+
+
+/* Pesan */
+.pesan{
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(161, 243, 227, 0.281), #fff);
+}
+/* Pesan Top */
+.pesan .container .top{
+    background-color: #edeff1;
+    width: 100%;
+}
+.pesan .container .top ul{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
+    color: black;
+}
+.pesan .container .top ul li{
+    list-style-type: none;
+    margin: 0;
+}
+.pesan .container .top ul li a{
+    color: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.pesan .container .top ul li:hover{
+    color: white;
+    background-color: skyblue;
+}
+.pesan .container .top ul li a i{
+    padding-right: 10px;
+}
+.pesan .container .top ul li.biru{
+    color: white;
+    background-color: skyblue;
+}
+/* Pesan Content */
+.pesan .container .content-pesan{
+    background-color: white;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding: 0 5%;
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    row-gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pesan .container .content-pesan h3{
+    text-align: center;
+    padding: 20px 0;
+}
+/* box pencarian hotel */
+.pesan .container .content-pesan .inputbox{
+    border: 1px silver solid;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* membuat jarak sekeliling ikon dalam box */
+.pesan .container .content-pesan i{
+    margin: 5px 10px;
+}
+.pesan .container .content-pesan .chek input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+.pesan .container .content-pesan  select, input{
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+/* Tombol Cari */
+.pesan .container .content-pesan  .cari button{
+    width:100%;
+    border: none;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.pesan .container .content-pesan .cari button:hover{
+    opacity: 0.8;
+}
+/* Grid pesan pesawat */
+.pesan .container .content-pesan{
+    grid-template-areas:    'judul judul judul judul judul judul'
+                            'kelas kelas kelas kelas kelas kelas'
+                            'asal asal asal tujuan tujuan tujuan'
+                            'pergi pergi pergi pulang pulang pulang'
+                            'dewasa dewasa anak anak bayi bayi'
+                            'ddewasa ddewasa ddewasa bbayi bbayi bbayi'
+                            'cari cari cari cari cari cari';
+    column-gap: 10%;
+}
+.pesan .container .content-pesan .judul-pesan{
+    grid-area: judul;
+}
+.pesan .container .content-pesan .kelas, .tujuan{
+    grid-area: kelas;
+}
+.pesan .container .content-pesan .dari, .tamu{
+    grid-area: asal;
+}
+.pesan .container .content-pesan .ke, .kamar{
+    grid-area: tujuan;
+}
+.pesan .container .content-pesan .in{
+    grid-area: pergi;
+}
+.pesan .container .content-pesan .out{
+    grid-area: pulang;
+}
+.pesan .container .content-pesan .dewasa{
+    grid-area: dewasa;
+}
+.pesan .container .content-pesan .anak{
+    grid-area: anak;
+}
+.pesan .container .content-pesan .bayi{
+    grid-area: bayi;
+}
+.pesan .container .content-pesan .cari{
+    grid-area: cari;
+}
+.pesan .container .content-pesan-kereta .dewasa{
+    grid-area: ddewasa;
+}
+.pesan .container .content-pesan-kereta .bayi{
+    grid-area: bbayi;
+}
+
+
+
+/* Kota Populer */
+.Kota-populer{
+    padding: 35px 0;
+    background-color: rgba(247, 245, 245, 0.603);
+}
+.Kota-populer .container{
+    background-color: white;
+    padding: 0
+}
+.Kota-populer h2{
+    background-color: #edeff1;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-left: 8px solid skyblue;
+    margin-bottom: 0px;
+}
+.Kota-populer .content{
+    padding: 30px 40px;
+    padding-bottom: 0px;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Kota-populer .content .box{
+    margin-bottom: 20px;
+}
+.Kota-populer .content .box a{
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    
+}
+.Kota-populer .content .box a:hover{
+    opacity: 0.8;
+}
+.Kota-populer .content .box .nama-kota{
+    position: absolute;
+    bottom: 80px;
+    left: 25px;
+    
+}
+.Kota-populer .content .box .mulai-harga{
+    position: absolute;
+    bottom: 60px;
+    left: 25px;
+}
+.Kota-populer .content .box .jumlah-hotel{
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    border: 1px solid white;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+/* Responsif*/
+@media screen and (max-width: 1200px){
+    .Kota-populer .content{
+        justify-content: space-around;
+        padding: 30px 15px;
+    }
+    .Kota-populer .content .box{
+        width: 300px;
+        overflow: hidden;
+    }
+    .Kota-populer .content .box .jumlah-hotel{
+        left: 10px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .Kota-populer .content{
+        padding: 30px 5px;
+    }
+}
+
+
+
+/*Promo*/
+.promo{
+    background-image: url(img/promo.jpg);
+    height: 80vh;
+    background-size: cover;
+    padding: 12% 0;
+    color: white;
+}
+.promo .box-promo{
+    width: 100%;
+    background-color: rgba(3, 3, 3, 0.568);
+    padding: 80px;
+}
+.promo .box-promo .container{
+    display: flex;
+    justify-content: space-around;
+}
+.promo .box-promo .container .diskon{
+    text-align: center;
+}
+.promo .book-btn{
+    width:150px;
+    height: max-content;
+    background: transparent;
+    padding:5px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.promo .book-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 835px){
+    .promo .box-promo .container{
+        display: block;
+        text-align: center;
+
+    }
+}
+
+
+/* Penilain Pengguna */
+.Penilaian-Pengguna{
+    background-color: rgba(241, 237, 237, 0.795);
+    text-align: center;
+    padding: 50px 0;
+}
+.Penilaian-Pengguna .container .content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.Penilaian-Pengguna .container .content .box-nilai{
+    width: 265px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-bottom: 15px;
+    margin: 25px 0;
+}
+.Penilaian-Pengguna .container .content .hide{
+    display: none;
+}
+.Penilaian-Pengguna .container .content .box-nilai p{
+    padding: 50px 10px 10px 10px;
+}
+.Penilaian-Pengguna .container .content .box-nilai p::before{
+    content: '\201d';
+    display: block;
+    font-size: 100px;
+    font-family: sans-serif;
+    line-height: 0;
+    color: #6495ed;
+}
+.Penilaian-Pengguna .container .content .box-nilai img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* position: relative; */
+    top: 45px;
+}
+#cimol:checked ~ .cimol{
+    display: block;
+}
+#ikbal:checked ~ .ikbal{
+    display: block;
+}
+#kj:checked ~ .kj{
+    display: block;
+}
+#april:checked ~ .april{
+    display: block;
+}
+/* #cimol:checked ~ #box-cimol{
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+} */
+
+/*Footer*/
+.footer{
+    padding: 100px 20px 20px 20px;
+    background-image: linear-gradient(skyblue, blue);
+    color: white;
+}
+.footer h4{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.footer p{
+    font-size: 12px;
+    text-align:justify
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: white;
+}
+.footer .row .fab, .footer .row .fas{
+    padding-right: 20px;
+    font-size: 15px;
+}
+.footer hr{
+    margin-top: 10px;
+    background: #efefef
+}
+.footer .copy{
+    text-align: center;
+}
+.footer input, .nama-klp{
+    display: none;
+}
+.footer ul{
+    list-style-type: none;
+}
+#klp6:checked ~ .nama-klp{
+    display: block;
+}
