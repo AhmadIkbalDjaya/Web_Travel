@@ -104,6 +104,27 @@
     padding: 0px 15px;
     box-sizing: border-box;
 }
+@media screen and (max-width: 425px) {
+    .pesan .container .top ul li a{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .pesan .container .top ul{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .pesan .container .top ul{
+        width: 100%;
+        padding: 0px;
+    }
+    .pesan .container .top ul li a{
+        font-size: 14px;
+    }
+}
 .pesan .container .top ul li:hover{
     color: white;
     background-color: skyblue;
