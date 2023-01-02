@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
 }
-/* Header */
-.header{
+
+/* header */
+header{
     height: 100vh;
+    display: grid;
     background-image: url(img/travel1.jpg);
     background-size: cover;
     background-position: center;
-    text-align: center;
-    color: #fff;
+    color: white;
     animation: background-header 15s ease 3s infinite;
 }
 @keyframes background-header {
@@ -23,445 +24,474 @@
         background-image: url(img/travel3.jpg);
     }
 }
-.header .container{
-    padding-top: 20px;
+header .atas{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-.header .container>h1{
-    float: left;
+header .atas h1{
+    cursor: default;
 }
-/* Tombol Login */
-.header .container .login-btn{
+header .atas .tombol-login{
     width: 100px;
-    padding: 3px 0;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-weight: 500;
     color: #fff;
-    border: 2px solid #fff;
-    background-color: transparent;
-    border-radius: 50px;
-    float: right;
-    font-weight: 600;
+    padding: 3px 0;
 }
-.header .container .login-btn:hover{
-    background-color: white;
-    color: black;
+header .atas .tombol-login:hover{
+    background-color: #fff;
+    color: #000;
 }
-.header>h1{
-    padding-top: 200px;
-    font-size: 55px;
+header .main{
+    margin-top: 25vh;
+    text-align: center;
 }
-/* Pencarian */
+header .main h1{
+    font-size: 60px;
+    cursor: default;
+}
+header .main p{
+    font-size: 20px;
+    cursor: default;
+}
+/* pencarian */
 .input-group{
     width: 90%;
     max-width: 500px;
     border-radius: 30px;
-    background: #fff;
+    background-color: #fff;
+    padding: 3px;
+    overflow: hidden;
     margin: auto;
-    padding: 2px;
 }
 .input-group .form-control{
     border: 0;
-    border-radius: 30px 0 0 30px;
     box-shadow: none !important;
-    margin: 2px;
 }
 .input-group .input-group-text{
     width: 100px;
     background-image: linear-gradient(skyblue, rgb(37, 148, 192));
     border-radius: 30px;
-    box-shadow: none;
+    border: none;
     color: #fff;
-    border: 0;
-    margin: 2px;
+    font-weight: 400;
+
+}
+/* responsive header */
+/* mobile */
+@media screen and (max-width: 425px){
+    header .atas h1{
+        font-size: 1.3em;
+    }
+    header .atas .tombol-login{
+        width: 70px;
+        padding: 0;
+        font-size: .9em;
+    }
+    header .main h1{
+        font-size: 36px
+    }
+    header .main p{
+        font-size: 12px
+    }
+}
+@media screen and (max-width: 320px){
+    header .atas h1{
+        font-size: 1.1em;
+    }
+    header .atas .tombol-login{
+        width: 60px;
+        padding: 0;
+        font-size: .8em;
+    }
+    header .main h1{
+        font-size: 30px
+    }
+    header .main p{
+        font-size: 13px
+    }
 }
 
 
 
-/* Pesan */
-.pesan{
-    padding: 50px 0;
-    background-image: linear-gradient(rgba(161, 243, 227, 0.281), #fff);
+
+/* Pemesanan */
+.pemesanan{
+    background-image: linear-gradient(rgba(161, 243, 227, 0.281),white);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-/* Pesan Top */
-.pesan .container .top{
+.pemesanan .container{
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    padding: 0 0;
+}
+/* header pemesanan */
+.pemesanan .container .top{
     background-color: #edeff1;
-    width: 100%;
-}
-.pesan .container .top ul{
     display: flex;
-    justify-content: space-around;
-    width: 85%;
-    margin: 0 auto;
-    color: black;
+    justify-content: space-evenly;
+    padding: 0 10%;
 }
-.pesan .container .top ul li{
-    list-style-type: none;
-    margin: 0;
-    cursor: pointer;
-}
-.pesan .container .top ul li{
-    color: inherit;
+.pemesanan .container .top button{
+    border: none;
+    background: transparent;
+    padding: 2px 15px;
     font-size: 20px;
     font-weight: 500;
-    text-decoration: none;
-    padding: 0px 15px;
-    box-sizing: border-box;
+    outline: none;
 }
-@media screen and (max-width: 425px) {
-    .pesan .container .top ul li{
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .pesan .container .top ul{
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .pesan .container .top ul{
-        width: 100%;
-        padding: 0px;
-    }
-    .pesan .container .top ul li{
-        font-size: 14px;
-    }
-}
-.pesan .container .top ul li:hover{
+.pemesanan .container .top button:hover{
+    background-color: lightblue;
     color: white;
-    background-color: skyblue;
 }
-.pesan .container .top ul li i{
-    padding-right: 10px;
+.pemesanan .container .top button i{
+    margin-right: 10px;
 }
-.pesan .container .top ul li.biru{
-    color: white;
-    background-color: skyblue;
-}
-/* Pesan Content */
-.pesan .container .content-pesan{
+/* content pemesanan */
+.pemesanan .container .content{
     background-color: white;
     border-left: 1px solid silver;
     border-right: 1px solid silver;
     border-bottom: 1px solid silver;
-    padding: 0 5%;
+    padding: 10px 5% 20px 5%;
     box-sizing: border-box;
-    width: 100%;
-    display: grid;
-    row-gap: 10px;
+    /* text-align: center; */
     font-size: 16px;
     font-weight: 500;
-}
-
-.pesan .container .content-pesan h3{
-    text-align: center;
-    padding: 20px 0;
-}
-/* box pencarian hotel */
-.pesan .container .content-pesan .inputbox{
-    border: 1px silver solid;
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-}
-/* membuat jarak sekeliling ikon dalam box */
-.pesan .container .content-pesan i{
-    margin: 5px 10px;
-}
-.pesan .container .content-pesan .chek input{
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid silver;
-}
-.pesan .container .content-pesan  select, input{
-    border: none;
-    width: 100%;
-    outline: none;
-}
-
-/* Tombol Cari */
-.pesan .container .content-pesan  .cari button{
-    width:100%;
-    border: none;
-    background-color: skyblue;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 10px 0;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-}
-.pesan .container .content-pesan .cari button:hover{
-    opacity: 0.8;
-}
-/* Grid pesan pesawat */
-.pesan .container .content-pesan{
+    display: grid;
+    row-gap: 5px;
+    column-gap: 10%;
     grid-template-areas:    'judul judul judul judul judul judul'
-                            'kelas kelas kelas kelas kelas kelas'
-                            'asal asal asal tujuan tujuan tujuan'
-                            'pergi pergi pergi pulang pulang pulang'
+                            'tujuan tujuan tujuan tujuan tujuan tujuan'
+                            'jmlTamu jmlTamu jmlTamu jmlKamar jmlKamar jmlKamar'
+                            'chek-in chek-in chek-in chek-out chek-out chek-out'
                             'dewasa dewasa anak anak bayi bayi'
                             'ddewasa ddewasa ddewasa bbayi bbayi bbayi'
                             'cari cari cari cari cari cari';
-    column-gap: 10%;
 }
-.pesan .container .content-pesan .judul-pesan{
-    grid-area: judul;
+.pemesanan .container .content h1{grid-area: judul;}
+.pemesanan .container .content .tujuan{grid-area: tujuan;}
+.pemesanan .container .content .tamu{grid-area: jmlTamu;}
+.pemesanan .container .content .kamar{grid-area: jmlKamar;}
+.pemesanan .container .content .chek-in{grid-area: chek-in;}
+.pemesanan .container .content .chek-out{grid-area: chek-out;}
+.pemesanan .container .content .cari{grid-area: cari;}
+.pemesanan .container .content .dewasa{grid-area: dewasa;}
+.pemesanan .container .content .anak{grid-area: anak;}
+.pemesanan .container .content .bayi{grid-area: bayi;}
+.pemesanan .container .content .ddewasa{grid-area: ddewasa;}
+.pemesanan .container .content .bbayi{grid-area: bbayi;}
+.pemesanan .container .content h1{
+    text-align: center;
 }
-.pesan .container .content-pesan .kelas, .tujuan{
-    grid-area: kelas;
+.pemesanan .container .content .box{
+    border: 1px solid silver;
+    border-radius: 3px;
+    display: flex;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    align-items: center;
 }
-.pesan .container .content-pesan .dari, .tamu{
-    grid-area: asal;
+.pemesanan .container .content button{
+    border: none;
+    background-color: skyblue;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
 }
-.pesan .container .content-pesan .ke, .kamar{
-    grid-area: tujuan;
+.pemesanan .container .content button:hover{
+    opacity: 0.8;
 }
-.pesan .container .content-pesan .in{
-    grid-area: pergi;
+.pemesanan .container .content input, 
+.pemesanan .container .content select{
+    width: 100%;
+    border: none;
+    outline: none;
 }
-.pesan .container .content-pesan .out{
-    grid-area: pulang;
+.pemesanan .container .content i{
+    margin-right: 5px;
 }
-.pesan .container .content-pesan .dewasa{
-    grid-area: dewasa;
+
+.biru{
+    color: white;
+    background-color: lightblue !important;
 }
-.pesan .container .content-pesan .anak{
-    grid-area: anak;
+
+.pesan-active{
+    display: grid;
 }
-.pesan .container .content-pesan .bayi{
-    grid-area: bayi;
+.pesan-nonActive{
+    display: none !important;
 }
-.pesan .container .content-pesan .cari{
-    grid-area: cari;
+
+/* responsive mobile */
+@media screen and (max-width:425px) {
+    .pemesanan{
+        padding-top: 0;
+    }
+    .pemesanan .container .top{
+        padding: 0;
+        justify-content: space-between;
+    }
+    .pemesanan .container .top button{
+        font-size: 16px;
+    }
+    .pemesanan .container .content{
+        border: none;
+        padding: 5px;
+        column-gap: 3%;
+        /* grid-template-areas:'judul'
+                            'tujuan'
+                            'jmlTamu'
+                            'jmlKamar'
+                            'chek-in'
+                            'chek-out'
+                            'dewasa'
+                            'anak'
+                            'bayi'
+                            'ddewasa'
+                            'bbayi'
+                            'cari'; */
+    }
+    .pemesanan .container .content .box{
+        padding: 2px 5px;
+    }
 }
-.pesan .container .content-pesan-kereta .dewasa{
-    grid-area: ddewasa;
+@media screen and (max-width: 320px) {
+    .pemesanan .container .content{
+        grid-template-areas:'judul judul'
+                            'tujuan tujuan'
+                            'jmlTamu jmlKamar'
+                            'chek-in chek-in'
+                            'chek-out chek-out'
+                            'dewasa dewasa'
+                            'anak bayi'
+                            'ddewasa bbayi'
+                            'cari cari';
+    }
+    .pemesanan .container .content h1{
+        font-size: 1.2em;
+    }
 }
-.pesan .container .content-pesan-kereta .bayi{
-    grid-area: bbayi;
-}
+
 
 
 
 /* Kota Populer */
-.Kota-populer{
-    padding: 35px 0;
-    background-color: rgba(247, 245, 245, 0.603);
-}
-.Kota-populer .container{
-    background-color: white;
-    padding: 0
-}
-.Kota-populer h2{
-    background-color: #edeff1;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-left: 8px solid skyblue;
-    margin-bottom: 0px;
-}
-.Kota-populer .content{
-    padding: 30px 40px;
-    padding-bottom: 0px;
-    border-left: 1px solid silver;
-    border-right: 1px solid silver;
-    border-bottom: 1px solid silver;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.Kota-populer .content .box{
-    margin-bottom: 20px;
-}
-.Kota-populer .content .box a{
-    text-decoration: none;
-    position: relative;
-    color: #fff;
-    
-}
-.Kota-populer .content .box a:hover{
-    opacity: 0.8;
-}
-.Kota-populer .content .box .nama-kota{
-    position: absolute;
-    bottom: 80px;
-    left: 25px;
-    
-}
-.Kota-populer .content .box .mulai-harga{
-    position: absolute;
-    bottom: 60px;
-    left: 25px;
-}
-.Kota-populer .content .box .jumlah-hotel{
-    position: absolute;
-    top: 85px;
-    right: 20px;
-    border: 1px solid white;
-    padding: 3px 8px;
-    border-radius: 5px;
-}
-
-/* Responsif*/
-@media screen and (max-width: 1200px){
-    .Kota-populer .content{
-        justify-content: space-around;
-        padding: 30px 15px;
-    }
-    .Kota-populer .content .box{
-        width: 300px;
-        overflow: hidden;
-    }
-    .Kota-populer .content .box .jumlah-hotel{
-        left: 10px;
-        width: 100px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .Kota-populer .content{
-        padding: 30px 5px;
-    }
-}
-
-
-
-/*Promo*/
-.promo{
-    background-image: url(img/promo.jpg);
-    height: 80vh;
-    background-size: cover;
-    padding: 12% 0;
-    color: white;
-}
-.promo .box-promo{
-    width: 100%;
-    background-color: rgba(3, 3, 3, 0.568);
-    padding: 80px;
-}
-.promo .box-promo .container{
-    display: flex;
-    justify-content: space-around;
-}
-.promo .box-promo .container .diskon{
-    text-align: center;
-}
-.promo .book-btn{
-    width:150px;
-    height: max-content;
-    background: transparent;
-    padding:5px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    font-weight: 600;
-}
-.promo .book-btn:hover{
-    background-color: white;
-    color: black;
-}
-
-@media screen and (max-width: 835px){
-    .promo .box-promo .container{
-        display: block;
-        text-align: center;
-
-    }
-}
-
-
-/* Penilain Pengguna */
-.Penilaian-Pengguna{
-    background-color: rgba(241, 237, 237, 0.795);
-    text-align: center;
+.kota-populer{
+    background-color: rgba(192, 192, 192, 0.164);
     padding: 50px 0;
 }
-.Penilaian-Pengguna .container .content{
+.kota-populer .container{
+    padding: 0;
+    box-sizing: border-box;
+}
+.kota-populer .container .top-kota{
+    background-color: rgba(192, 192, 192, 0.445);
+    border-left: 15px solid skyblue;
+    padding: 2px 20px;
+}
+.kota-populer .container .content-kota{
+    border: 1px solid silver;
+    border-top: none;
+    padding: 25px 2%;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
+    
+    /* display: grid;
+    grid-template-areas:'big big big big box box'
+                        'box box big big big big'
+                        ;
+    grid-template: ; */
 }
-.Penilaian-Pengguna .container .content .box-nilai{
-    width: 265px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
-    padding-bottom: 15px;
-    margin: 25px 0;
+.kota-populer .container .content-kota .box{
+    /* width: 350px; */
+    flex: 26.5%;
+    height: 250px;
+    /* border: 1px solid black; */
+    color: rgb(248, 240, 240);
+    margin-bottom: 20px;
+    position: relative;
+    margin: 10px 15px;
+    background-size: cover;
+    background-position: center ;
 }
-.Penilaian-Pengguna .container .content .hide{
-    display: none;
+.kota-populer .container .content-kota .box:hover{
+    opacity: .7;
 }
-.Penilaian-Pengguna .container .content .box-nilai p{
-    padding: 50px 10px 10px 10px;
+.kota-populer .container .content-kota .big{
+    /* width: 700px; */
+    flex: 60%;
 }
-.Penilaian-Pengguna .container .content .box-nilai p::before{
+.kota-populer .container .content-kota .box .namaKota{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    text-transform: capitalize;
+}
+.kota-populer .container .content-kota .box .harga{
+    /* display: none; */
+    position: absolute;
+    top: 45px;
+    left: 20px;
+}
+.kota-populer .container .content-kota .box .jmlHotel{
+    /* display: none; */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+/* responsive */
+/* tablet */
+@media screen and (max-width:768px) {
+    .kota-populer .container .content-kota .box{
+        flex: 40%;
+    }
+    .kota-populer .container .content-kota .big{
+        flex: 100%;
+    }
+}
+/* handphone */
+@media screen and (max-width: 425px) {
+    .kota-populer{
+        padding: 0 0;
+    }
+    .kota-populer .container .content-kota{
+        padding: 0 0;
+    }
+    .kota-populer .container .content-kota .box{
+        flex: 100%;
+        margin: 10px 0px;
+    }.kota-populer .container .content-kota .box:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+
+
+
+/* Penilaian Pengguna */
+.penilaian{
+    margin: 50px 0;
+    text-align: center;
+}
+.content-penilaian{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: skyblue; */
+}
+.box-penilaian{
+    box-sizing: border-box;
+    text-align: center;
+    /* width: 20%; */
+    /* background-color: #fff; */
+    padding: 0 1%;
+    margin: 10px 5px;
+    height: min-content;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+.box-penilaian .foto-penilai{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    /* margin: 0 0 20px 0; */
+}
+.box-penilaian .penilaian-pengguna{
+    transition: all 300ms;
+    margin-top: 10px;
+    /* border-radius: 0 0 10px 10px;
+    padding-bottom: 20px; */
+}
+.box-penilaian .penilaian-pengguna::before{
     content: '\201d';
     display: block;
     font-size: 100px;
     font-family: sans-serif;
     line-height: 0;
-    color: #6495ed;
+    padding-top: 50px;
+    color: skyblue;
 }
-.Penilaian-Pengguna .container .content .box-nilai img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    /* position: relative; */
-    top: 45px;
+.hide-penilaian{
+    display: none;
 }
-#cimol:checked ~ .cimol{
-    display: block;
+.show-box{
+    border: 0 solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-#ikbal:checked ~ .ikbal{
-    display: block;
-}
-#kj:checked ~ .kj{
-    display: block;
-}
-#april:checked ~ .april{
-    display: block;
-}
-/* #cimol:checked ~ #box-cimol{
-    border: 1px solid black;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
-} */
 
-/*Footer*/
+/* Responsive Penilaian */
+/* MObile */
+@media screen and (max-width: 425px) {
+    .penilaian .container{
+        padding: 0;
+    }
+    .content-penilaian{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .box-penilaian{
+        margin: 10px 0;
+        border-radius: 0;
+    }
+}
+
+
+
+
+
+
+
+/* Footer */
 .footer{
-    padding: 100px 20px 20px 20px;
     background-image: linear-gradient(skyblue, blue);
-    color: white;
+    padding: 50px 0;
+    color: white
+}
+.footer ul{
+    list-style-type: none;
+    padding-left: 0;
 }
 .footer h4{
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-.footer p{
-    font-size: 12px;
-    text-align:justify
+.footer p,
+.footer ul{
+    font-size: .8em;
+}
+.footer ul li{
+    margin-bottom: 20px;
 }
 .footer a{
-    color: white;
     text-decoration: none;
+    color: white;
+}
+.footer i{
+    margin-right: 20px;
 }
 .footer a:hover{
     color: white;
 }
-.footer .row .fab, .footer .row .fas{
-    padding-right: 20px;
-    font-size: 15px;
-}
-.footer hr{
-    margin-top: 10px;
-    background: #efefef
-}
-.footer .copy{
-    text-align: center;
-}
-.footer input, .nama-klp{
-    display: none;
-}
-.footer ul{
-    list-style-type: none;
-}
-#klp6:checked ~ .nama-klp{
-    display: block;
-}
+
+
+
+
+
+
+
+
+

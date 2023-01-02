@@ -1,308 +1,400 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jalan Jalan</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-        <!-- <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css"> -->
-    
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="header">
-            <div class="container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalan Jalan 2.0</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <!-- <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css"> -->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="atas">
                 <h1>Jalan Jalan</h1>
                 <a href="login/login.html">
-                    <button type="button" class="login-btn">Masuk</button>
+                    <button type="button" class="tombol-login">Masuk</button>
                 </a>
             </div>
-            <h1>Travel Keliling Dunia</h1>
-            <p>Kunjungi tempat impian anda dengan aman, nyaman dan terjamin</p>   
-            <div class="input-group">
-                <input type="text" placeholder="Cari Kota atau Negara" class="form-control">
-                <div class="input-group-append">
-                    <button type="submit" class="input-group-text btn">Search</button>
+            <div class="main">
+                <h1>Travel Keliling Dunia</h1>
+                <p>Kunjungi tempat impian anda dengan aman, nyaman dan terjamin</p>   
+                <div class="input-group">
+                    <input type="text" placeholder="Cari Kota atau Negara" class="form-control">
+                    <div class="input-group-append">
+                        <button type="submit" class="input-group-text btn">Search</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Pesan -->
-        <div class="pesan" id="pesan">
-            <div class="container">
-                <div class="top">
-                    <ul class="container">
-                        <li class="hotel biru" id="pesanHotel"><i class="fas fa-hotel"></i>Hotel</li>
-                        <li class="pesawat" id="pesanPesawat"><i class="fas fa-plane"></i>Pesawat</li>
-                        <li  class="kereta" id="pesanKereta"><i class="fas fa-train"></i>Kereta</li>
+    </header>
+    <div class="pemesanan" id="pemesanan">
+        <div class="container">
+            <div class="top">
+                <button type="button" class="hotel biru"><i class="fas fa-hotel"></i>Hotel</button>
+                <button type="button" class="pesawat"><i class="fas fa-plane"></i>Pesawat</button>
+                <button type="button" class="kereta"><i class="fas fa-train"></i>Kereta</button>
+            </div>
+            <div class="content content-hotel">
+                <h1>Cari Hotel Keinginan Anda</h1>
+                <div class="tujuan">
+                    <label for="tujuan-input">Kota, tujuan, atau nama hotel</label>
+                    <div class="box-tujuan box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Kota, hotel, tempat wisata" name="tujuan-input">
+                    </div>
+                </div>
+                <div class="tamu">
+                    <label for="">Jumlah Tamu</label>
+                    <div class="box-j-tamu box" >
+                        <i class="fas fa-user"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kamar">
+                    <label for="">Jumlah Kamar</label>
+                    <div class="box-j-kamar box">
+                        <i class="fas fa-bed"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chek-in">
+                    <label for="">Check In</label>
+                    <input type="date" class="box">
+                </div>
+                <div class="chek-out">
+                    <label for="">Check Out</label>
+                    <input type="date" name="" id="" class="box">
+                </div>
+                <button type="button" class="cari">Cari Hotel</button>
+            </div>
+            <div class="content content-pesawat pesan-nonActive">
+                <h1>Cari Tiket Pesawat</h1>
+                <div class="tujuan kelas-penerbangan">
+                    <label for="">Kelas Penerbangan</label>
+                    <div class="box-kelas-penerbngan box">
+                        <i class="fas fa-chair"></i>
+                        <select name="" id="">
+                            <option value="">Economy</option>
+                            <option value="">Premium Economy</option>
+                            <option value="">Business</option>
+                            <option value="">First Class</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tamu asal">
+                    <label for="">Asal</label>
+                    <div class="box-j-tamu box" >
+                        <i class="fas fa-plane-departure"></i>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="kamar asal">
+                    <label for="">Tujuan</label>
+                    <div class="box-j-kamar box">
+                        <i class="fas fa-plane-arrival"></i>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="chek-in">
+                    <label for="">Check In</label>
+                    <input type="date" class="box">
+                </div>
+                <div class="chek-out">
+                    <label for="">Check Out</label>
+                    <input type="date" name="" id="" class="box">
+                </div>
+                <div class="dewasa">
+                    <label for="">Dewasa</label>
+                    <div class="box">
+                        <i class="fas fa-user"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="anak">
+                    <label for="">Anak</label>
+                    <div class="box">
+                        <i class="fas fa-child"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bayi">
+                    <label for="">Bayi</label>
+                    <div class="box">
+                        <i class="fas fa-baby"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="cari">Cari Tiket Pesawat</button>
+            </div>
+            <div class="content content-kereta pesan-nonActive">
+                <h1>Cari Tiket Kereta</h1>
+                <div class="tamu asal">
+                    <label for="">Asal</label>
+                    <div class="box-j-tamu box" >
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="kamar asal">
+                    <label for="">Tujuan</label>
+                    <div class="box-j-kamar box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="chek-in">
+                    <label for="">Tanggal Pergi</label>
+                    <input type="date" class="box">
+                </div>
+                <div class="chek-out">
+                    <label for="">Tanggal Pulang</label>
+                    <input type="date" name="" id="" class="box">
+                </div>
+                <div class="ddewasa">
+                    <label for="">Dewasa</label>
+                    <div class="box">
+                        <i class="fas fa-user"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bbayi">
+                    <label for="">Bayi</label>
+                    <div class="box">
+                        <i class="fas fa-baby"></i>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="cari">Cari Tiket Kereta</button>
+            </div>
+        </div>
+    </div>
+    <div class="kota-populer">
+        <div class="container">
+            <div class="top-kota">
+                <h4>Kota Populer</h4>
+            </div>
+            <div class="content-kota">
+                <div class="bali box big" id="bali">
+                    <h4 class="namaKota">bali</h4>
+                    <p class="harga">mulai dari Rp 24.793</p>
+                    <div class="jmlHotel">3166 Hotel</div>
+                </div>
+                <div class="singapure box" id="singapure">
+                    <h4 class="namaKota">singapure</h4>
+                    <p class="harga">mulai dari Rp 159.443</p>
+                    <div class="jmlHotel">454 Hotel</div>
+                </div>
+                <div class="yogyakarta box" id="yogyakarta">
+                    <h4 class="namaKota">yogyakarta</h4>
+                    <p class="harga">mulai dari Rp 66.166</p>
+                    <div class="jmlHotel">1578 Hotel</div>
+                </div>
+                <div class="jakarta box big" id="jakarta">
+                    <h4 class="namaKota">jakarta</h4>
+                    <p class="harga">mulai dari Rp 74.380</p>
+                    <div class="jmlHotel">1243 Hotel</div>
+                </div>
+                <div class="bogor box" id="bogor">
+                    <h4 class="namaKota">bogor</h4>
+                    <p class="harga">mulai dari Rp 136.364</p>
+                    <div class="jmlHotel">339 Hotel</div>
+                </div>
+                <div class="surabaya box" id="surabaya">
+                    <h4 class="namaKota">surabaya</h4>
+                    <p class="harga">mulai dari Rp 61.982</p>
+                    <div class="jmlHotel">625 Hotel</div>
+                </div>
+                <div class="kuala-lumpur box" id="kuala-lumpur">
+                    <h4 class="namaKota">kuala lumpur</h4>
+                    <p class="harga">mulai dari Rp 74.380</p>
+                    <div class="jmlHotel">1301 Hotel</div>
+                </div>
+                <div class="solo box" id="solo">
+                    <h4 class="namaKota">solo</h4>
+                    <p class="harga">mulai dari Rp 72.893</p>
+                    <div class="jmlHotel">208 Hotel</div>
+                </div>
+                <div class="semarang box" id="semarang">
+                    <h4 class="namaKota">semarang</h4>
+                    <p class="harga">mulai dari Rp 56.932</p>
+                    <div class="jmlHotel">432 Hotel</div>
+                </div>
+                <div class="medan box" id="medan">
+                    <h4 class="namaKota">medan</h4>
+                    <p class="harga">mulai dari Rp 74.380</p>
+                    <div class="jmlHotel">329 Hotel</div>
+                </div>
+                <div class="malang box" id="malang">
+                    <h4 class="namaKota">malang</h4>
+                    <p class="harga">mulai dari Rp 49.587</p>
+                    <div class="jmlHotel">1284 Hotel</div>
+                </div>
+                <div class="penang box" id="penang">
+                    <h4 class="namaKota">penang</h4>
+                    <p class="harga">mulai dari Rp 182.151</p>
+                    <div class="jmlHotel">469 Hotel</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="penilaian">
+        <div class="container">
+            <h1 class="judulP">Penilaian Pengguna</h1>
+            <div class="content-penilaian">
+                <div class="box-penilaian">
+                    <h5 class="nama-penilai">Tony Stark</h5>
+                    <img src="img/user/iron-man.jpg" alt="" class="foto-penilai">
+                    <p class="penilaian-pengguna hide-penilaian">Pesan tiket di jalan jalan.com sangat mudah, banyak pilihan dan terpercaya. Serta memiliki pilihan pembayaran yang sangat beragam.<p>
+                </div>
+                <div class="box-penilaian">
+                    <h5 class="nama-penilai">Steve Rogers</h5>
+                    <img src="img/user/captain-america.jpg" alt="" class="foto-penilai">
+                    <p class="penilaian-pengguna hide-penilaian">Saya sangat suka pesan tiket disini, sangat praktis, tidak perlu keluar rumah dan gampang bayarnya. Terima kasih jalan jalan.com<p>
+                </div>
+                <div class="box-penilaian">
+                    <h5 class="nama-penilai">Doctor Stranger</h5>
+                    <img src="img/user/doctor-stranger.jpg" alt="" class="foto-penilai">
+                    <p class="penilaian-pengguna hide-penilaian">Salut sih fiturnya easy to use, bisa pesen tiket kereta, pesawat, bahkan hotel. Ini bener-bener ngebantu banget. Terima kasih jalan jalan.com<p>
+                </div>
+                <div class="box-penilaian">
+                    <h5 class="nama-penilai">Thor</h5>
+                    <img src="img/user/thor.jpg" alt="" class="foto-penilai">
+                    <p class="penilaian-pengguna hide-penilaian">websitenya sangat membantu para pengguna untuk mencari tujuan wisata dan penginapan yang baik, nyaman dan aman. Terima kasih<p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <section class="row">
+                <section class="col-md-3">
+                    <h4>Jalan Jalan</h4>
+                    <p>Situs ini dibuat sebagai latihan dan mengembangkan tugas final pemrogaman web sebelumnya. website ini lebih responsif dan sudah menggunakan javascript</p>
+                </section>
+                <section class="col-md-3">
+                    <h4>Fitur</h4>
+                    <ul>
+                        <li>Pesan Hotel</li>
+                        <li>Pesan Tiket  Pesawat</li>
+                        <li>Pesan Tiket  Kereta</li>
                     </ul>
-                </div>
-                <div class="content-pesan" id="contentPesan">
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Kota Populer -->
-        <div class="Kota-populer">
-            <div class="container">
-                <h2>Kota Populer</h2>
-                <div class="content">
-                    <div class="box big Bali">
-                        <a href="#" title="Bali">
-                            <img src="img/kota/bali.jpg" alt="Hotel di Bali" width="700" height="250">
-                            <h3 class="nama-kota">Bali</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 24.793</span>
-                            </div>
-                            <div class="jumlah-hotel">3166 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Singapure">
-                        <a href="#" title="Singapure">
-                            <img src="img/kota/singapore.jpg" alt="Hotel di Singapure" width="345" height="250">
-                            <h3 class="nama-kota">Singapure</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 159.443</span>
-                            </div>
-                            <div class="jumlah-hotel">454 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Yogyakarta">
-                        <a href="#" title="Yogyakarta">
-                            <img src="img/kota/yogyakarta.jpg" alt="Hotel di Yogyakarta" width="345" height="250">
-                            <h3 class="nama-kota">Yogyakarta</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 66.166</span>
-                            </div>
-                            <div class="jumlah-hotel">1578 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box big Jakarta">
-                        <a href="#" title="Jakarta">
-                            <img src="img/kota/jakarta.jpg" alt="Hotel di Jakarta" width="700" height="250">
-                            <h3 class="nama-kota">Jakarta</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 74.380</span>
-                            </div>
-                            <div class="jumlah-hotel">1243 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Bogor">
-                        <a href="#" title="Bogor">
-                            <img src="img/kota/bogor.jpg" alt="Hotel di Bogor" width="345" height="250">
-                            <h3 class="nama-kota">Bogor</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 136.364</span>
-                            </div>
-                            <div class="jumlah-hotel">339 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Surabaya">
-                        <a href="#" title="Surabaya">
-                            <img src="img/kota/surabaya.jpg" alt="Hotel di Surabaya" width="345" height="250">
-                            <h3 class="nama-kota">Surabaya</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 61.982</span>
-                            </div>
-                            <div class="jumlah-hotel">625 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Kuala-Lumpur">
-                        <a href="#" title="Kuala Lumpur">
-                            <img src="img/kota/kuala-lumpur.jpg" alt="Hotel di Kuala Lumpur" width="345" height="250">
-                            <h3 class="nama-kota">Kuala Lumpur</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 74.380</span>
-                            </div>
-                            <div class="jumlah-hotel">1301 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Solo">
-                        <a href="#" title="Solo">
-                            <img src="img/kota/solo.jpg" alt="Hotel di Solo" width="345" height="250">
-                            <h3 class="nama-kota">Solo</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 72.893</span>
-                            </div>
-                            <div class="jumlah-hotel">208 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Semarang">
-                        <a href="#" title="Semarang">
-                            <img src="img/kota/semarang.jpg" alt="Hotel di Semarang" width="345" height="250">
-                            <h3 class="nama-kota">Semarang</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 56.932</span>
-                            </div>
-                            <div class="jumlah-hotel">432 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Medan">
-                        <a href="#" title="Medan">
-                            <img src="img/kota/medan.jpg" alt="Hotel di Medan" width="345" height="250">
-                            <h3 class="nama-kota">Medan</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 74.380</span>
-                            </div>
-                            <div class="jumlah-hotel">329 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Malang">
-                        <a href="#" title="Malang">
-                            <img src="img/kota/malang.jpg" alt="Hotel di Malang" width="345" height="250">
-                            <h3 class="nama-kota">Malang</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 49.587</span>
-                            </div>
-                            <div class="jumlah-hotel">1284 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Bandung">
-                        <a href="#" title="Bandung">
-                            <img src="img/kota/bandung.jpg" alt="Hotel di Bandung" width="345" height="250">
-                            <h3 class="nama-kota">Bandung</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 41.322</span>
-                            </div>
-                            <div class="jumlah-hotel">1261 Hotel</div>
-                        </a>
-                    </div>
-                    <div class="box Penang">
-                        <a href="#" title="Penang">
-                            <img src="img/kota/penang.jpg" alt="Hotel di Penang" width="345" height="250">
-                            <h3 class="nama-kota">Penang</h3>
-                            <div class="mulai-harga">
-                                mulai dari
-                                <span class="harga">Rp 182.151</span>
-                            </div>
-                            <div class="jumlah-hotel">469 Hotel</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Promo -->
-        <div class="promo">
-            <div class="box-promo">
-                <div class="container">
-                    <div class="diskon">
-                        <h2>Diskon 40% Akhir Tahun</h2>
-                        <p>Booking sekarang juga dan dapatkan diskon menarik untuk hotel</p>
-                    </div>
-                    <button class="book-btn">Booking Sekarang</button>
-                </div>
-            </div>
-        </div>
-        <!-- Penilaian Pengguna -->
-        <div class="Penilaian-Pengguna">
-            <div class="container">
-                <h1>Penilaian Pengguna</h1>
-                <div class="content">
-                    <div class="box-nilai" id="box-cimol">
-                        <input type="checkbox" name="" id="cimol" class="hide">
-                        <p class="hide cimol">Saya sangat suka pesan tiket disini, sangat praktis, tidak perlu keluar rumah dan gampang bayarnya. Terima kasih jalan jalan.com</p>
-                        <label for="cimol">
-                            <h5>Nurul Khusnul Khotimah</h5>
-                            <img src="img/user/cimol.jpg" alt="" id="">
-                        </label>
-                    </div>
-                    <div class="box-nilai" id="box-ikbal">
-                        <input type="checkbox" name="" id="ikbal" class="hide">
-                        <p class="hide ikbal">Pesan tiket di jalan jalan.com sangat mudah, banyak pilihan dan terpercaya. Serta memiliki pilihan pembayaran yang sangat beragam.</p>
-                        <label for="ikbal">
-                            <h5>Ahmad Ikbal Djaya</h5>
-                            <img src="img/user/ikbal.jpg" alt="" id="">
-                        </label>
-                    </div>
-                    <div class="box-nilai" id="box-kj">
-                        <input type="checkbox" name="" id="kj" class="hide">
-                        <p class="hide kj">Salut sih fiturnya easy to use, bisa pesen tiket kereta, pesawat, bahkan hotel. Ini bener-bener ngebantu banget. Terima kasih jalan jalan.com</p>
-                        <label for="kj">
-                            <h5>Khairunnisaa Jabir</h5>
-                            <img src="img/user/kj.jpg" alt="" id="">
-                        </label>
-                    </div>
-                    <div class="box-nilai" id="box-april">
-                        <input type="checkbox" name="" id="april" class="hide">
-                        <p class="hide april">websitenya sangat membantu para pengguna untuk mencari tujuan wisata dan penginapan yang baik, nyaman dan aman. Terima kasih jalan jalan.com</p>
-                        <label for="april">
-                            <h5>Nur Aprilia</h5>
-                            <img src="img/user/april.jpeg" alt="" id="">
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h4>Jalan Jalan</h4>
-                        <p>Situs Ini Dibuat Untuk Membantu Para Pengguna Untuk Lebih Mudah Memesan Tiket Pesawat, Tiket Kereta Dan Pesan Hotel Dimanapun Yang Pengguna Inginkan.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Fitur</h4>
-                        <p>Pesan Hotel</p>
-                        <p>Pesan Tiket Pesawat</p>
-                        <p>Pesan Tiket Kereta</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Hubungi Kami</h4>
-                        <p><i class="fas fa-phone"></i>08123456789</p>
-                        <p><i class="fas fa-envelope"></i>jalan_jalan@gmail.com</p>
-                        <p><i class="fas fa-home"></i>Jl Kesurga, Makassar</p>
-                    </div>                        
-                    <div class="col-md-3">
-                        <h4>Ikuti Kami</h4>
-                        <p>
-                            <a href="#">
-                                <i class="fab fa-facebook-square"></i>Facebokk
-                            </a>
-                        </p>
-                        <p>
-                            <a href="#"><i class="fab fa-youtube"></i>Youtube</a>
+                </section>
+                <section class="col-md-3">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i>08123456789</li>
+                        <li><i class="fas fa-envelope"></i>jalan_jalan@email.com</li>
+                        <li><i class="fas fa-home"></i>Jl.Kabajikan</li>
+                    </ul>
+                </section>
+                <section class="col-md-3">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-square"></i>Facebook</a>
                             
-                        </p>
-                        <p>
-                            <a href="#"><i class="fab fa-twitter"></i>Twiter</a>
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="copy">
-                    <label for="klp6">
-                        <p class="copyright">&copy; Ahmad Ikbal Djaya 2022</p>
-                    </label>
-                    <input type="checkbox" name="" id="klp6">
-                    <ul class="nama-klp">
-                        <li>Ahmad Ikbal Djaya (60200120073)</li>
-                        <li>Nur Aprilia (60200120136)</li>
-                        <li>Khaerunnisa Jabir (60200120044)</li>
-                        <li>Nurul Khusnul Khotimah (60200120016)</li>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>You Tube
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                            
+                        </li>
                     </ul>
-                </div>
-            </div>
+                </section>
+                
+            </section>
         </div>
-
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
+    </footer>
+<script src="script.js"></script>
+</body>
 </html>

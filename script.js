@@ -1,32 +1,35 @@
-$(document).ready(function(){
-  console.log('JQuery Aman');
-  
-  $.get('partials/hotel.html', function(data){
-    $('#contentPesan').html(data);
-  });
-  
-  $('#pesanPesawat').on('click', function(){
-    $('ul.container li').removeClass('biru');
-    $('#pesanPesawat').addClass('biru');
-    $.get('partials/pesawat.html', function(data){
-      $('#contentPesan').html(data);
+const tombolPesan = document.querySelectorAll('.pemesanan .top button');
+const contenPesan = document.querySelectorAll('.pemesanan .content');
+for(let i=0; i<tombolPesan.length; i++){
+    tombolPesan[i].addEventListener('click', function(){
+        for(let i=0; i<tombolPesan.length; i++){
+            tombolPesan[i].classList.remove('biru')
+            contenPesan[i].classList.add('pesan-nonActive')
+        }
+        tombolPesan[i].classList.add('biru');
+        contenPesan[i].classList.remove('pesan-nonActive')
     })
-  });
+}
 
-  $('#pesanKereta').on('click', function(){
-    $('ul.container li').removeClass('biru');
-    $('#pesanKereta').addClass('biru');
-    $.get('partials/kereta.html', function(data){
-      $('#contentPesan').html(data);
-    })
-  });
-  
-  $('#pesanHotel').on('click', function(){
-    $('ul.container li').removeClass('biru');
-    $('#pesanHotel').addClass('biru');
-    $.get('partials/hotel.html', function(data){
-      $('#contentPesan').html(data);
-    })
-  });
 
-});
+
+const boxKota = document.querySelectorAll('.content-kota .box');
+for(let i=0; i<boxKota.length; i++){
+    const namaKota= boxKota[i].getAttribute('id');
+    boxKota[i].style.backgroundImage = 'url(img/kota/'+namaKota+'.jpg)'
+}
+
+
+
+// penilaian
+const fotoPenilai = document.querySelectorAll('.foto-penilai')
+for(let i=0; i<fotoPenilai.length; i++){
+    fotoPenilai[i].addEventListener('click', function(e){
+        // e.target.previousElementSibling.classList.toggle('hide-penilaian')
+        e.target.nextElementSibling.classList.toggle('hide-penilaian')
+        // e.target.nextElementSibling.classList.toggle('show-box')
+        e.target.parentElement.classList.toggle('show-box')
+    })
+}
+
+
